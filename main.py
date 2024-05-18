@@ -2,9 +2,11 @@ import telebot
 import requests
 import json
 import math
+from dotenv import load_dotenv
+import os
 
-bot = telebot.TeleBot('6949308842:AAHLMDWxNy-rbKfBHu-iZPNVK_78pvcgV6E')
-API = '7303cdb3e9fb4921f339daffe170e1c9'
+bot = telebot.TeleBot(os.getenv('TOKEN1'))
+API = os.getenv('TOKEN2')
 
 
 @bot.message_handler(commands=['start'])
